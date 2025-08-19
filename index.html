@@ -35,15 +35,15 @@ td {
 
 
 <table>
-<tr><td></td><td>Class</td><td>Location</td><td>Description</td></tr>
-<tr><td>B</td><td><input type="text" id="B" size="20%"></td><td><input type="text" id="B_location" size="10%"></td><td><input type="text" id="B_description" size="30%"></td></tr>
-<tr><td>C</td><td><input type="text" id="C" size="20%"></td><td><input type="text" id="C_location" size="10%"></td><td><input type="text" id="C_description" size="30%"></td></tr>
-<tr><td>D</td><td><input type="text" id="D" size="20%"></td><td><input type="text" id="D_location" size="10%"></td><td><input type="text" id="D_description" size="30%"></td></tr>
-<tr><td>E</td><td><input type="text" id="E" size="20%"></td><td><input type="text" id="E_location" size="10%"></td><td><input type="text" id="E_description" size="30%"></td></tr>
-<tr><td>F</td><td><input type="text" id="F" size="20%"></td><td><input type="text" id="F_location" size="10%"></td><td><input type="text" id="F_description" size="30%"></td></tr>
-<tr><td>G</td><td><input type="text" id="G" size="20%"></td><td><input type="text" id="G_location" size="10%"></td><td><input type="text" id="G_description" size="30%"></td></tr>
-<tr><td>H</td><td><input type="text" id="H" size="20%"></td><td><input type="text" id="H_location" size="10%"></td><td><input type="text" id="H_description" size="30%"></td></tr>
-<tr><td>I</td><td><input type="text" id="I" size="20%"></td><td><input type="text" id="I_location" size="10%"></td><td><input type="text" id="I_description" size="30%"></td></tr>
+<tr><td></td><td>Class</td><td>Location</td><td>Description</td><td>ID</td></tr>
+<tr><td>B</td><td><input type="text" id="B" size="20%" /></td><td><input type="text" id="B_location" size="10%" /></td><td><input type="text" id="B_description" size="30%" /></td><td><input type="text" id="B_id" size="10%" /></td></tr>
+<tr><td>C</td><td><input type="text" id="C" size="20%" /></td><td><input type="text" id="C_location" size="10%" /></td><td><input type="text" id="C_description" size="30%" /></td><td><input type="text" id="C_id" size="10%" /></td></tr>
+<tr><td>D</td><td><input type="text" id="D" size="20%" /></td><td><input type="text" id="D_location" size="10%" /></td><td><input type="text" id="D_description" size="30%" /></td><td><input type="text" id="D_id" size="10%" /></td></tr>
+<tr><td>E</td><td><input type="text" id="E" size="20%" /></td><td><input type="text" id="E_location" size="10%" /></td><td><input type="text" id="E_description" size="30%" /></td><td><input type="text" id="E_id" size="10%" /></td></tr>
+<tr><td>F</td><td><input type="text" id="F" size="20%" /></td><td><input type="text" id="F_location" size="10%" /></td><td><input type="text" id="F_description" size="30%" /></td><td><input type="text" id="F_id" size="10%" /></td></tr>
+<tr><td>G</td><td><input type="text" id="G" size="20%" /></td><td><input type="text" id="G_location" size="10%" /></td><td><input type="text" id="G_description" size="30%" /></td><td><input type="text" id="G_id" size="10%" /></td></tr>
+<tr><td>H</td><td><input type="text" id="H" size="20%" /></td><td><input type="text" id="H_location" size="10%" /></td><td><input type="text" id="H_description" size="30%" /></td><td><input type="text" id="H_id" size="10%" /></td></tr>
+<tr><td>I</td><td><input type="text" id="I" size="20%" /></td><td><input type="text" id="I_location" size="10%" /></td><td><input type="text" id="I_description" size="30%" /></td><td><input type="text" id="I_id" size="10%" /></td></tr>
 </table>
 
 <table>
@@ -94,6 +94,20 @@ td {
     <code>my_rotation.ics</code> file that you saved</li>
 <li>Click "Import".</li>
 </ul>
+
+<h3>Advanced usage: multiple classes during the same period</h3>
+
+<p>The second time you import, your new events will overwrite any
+previously imported events occurring at the same time.  You can avoid
+this by using the ID field in the form above.</p>
+
+<p>You can put any text/numbers you want in the ID field.  Events
+with different IDs will not overwrite each other.</p>
+
+<p>For example, if you want to include 3 different classes occuring during
+the same period on the same calendar, you could use three different ids:
+1, 2, 3 to generate three <code>.ics</code> files to import into your
+calendar.</p>
 
 
 <h2>About</h2>
@@ -154,6 +168,10 @@ function generateCalendar()
             let inputDescription = document.getElementById(period + "_description");
             if (inputDescription)
                 schedule[period]["description"] = inputDescription.value;
+
+            let inputID = document.getElementById(period + "_id");
+            if (inputID)
+                schedule[period]["uid_suffix"] = inputID.value;
         }
     }
 

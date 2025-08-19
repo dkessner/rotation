@@ -272,7 +272,7 @@ const spring26End = "2026-06";
 const scheduleBD = 
 {
     B: {summary: "B CS Projects", description: "blah blah"},
-    D: {summary: "D APCS", "location": "D215"}
+    D: {summary: "D APCS", "location": "D215", "uid_suffix":".goo"}
 };
 
 
@@ -289,17 +289,20 @@ assert.equal(bdPeriods_fall25.length, 66);
 
 
 
-const icsBD_spring25 = doTransformation(scheduleBD, spring25Start, spring25End);
+const icsBD_spring26 = doTransformation(scheduleBD, spring26Start, spring26End);
 
-const bPeriods_spring25 = icsBD_spring25.match(/B CS Projects/g);
-assert.equal(bPeriods_spring25.length, 40);
+const bPeriods_spring26 = icsBD_spring26.match(/B CS Projects/g);
+assert.equal(bPeriods_spring26.length, 40);
 
-const dPeriods_spring25 = icsBD_spring25.match(/D APCS/g);
-assert.equal(dPeriods_spring25.length, 40);
+const dPeriods_spring26 = icsBD_spring26.match(/D APCS/g);
+assert.equal(dPeriods_spring26.length, 40);
 
-const bdPeriods_spring25 = icsBD_spring25.match(/SUMMARY:/g);
-assert.equal(bdPeriods_spring25.length, 80);
+const bdPeriods_spring26 = icsBD_spring26.match(/SUMMARY:/g);
+assert.equal(bdPeriods_spring26.length, 80);
 
-
+// uid suffix testing
+const uid_tagged_periods_spring26 = icsBD_spring26.match(/UID:.*\.goo/g);
+assert.notEqual(uid_tagged_periods_spring26, null);
+assert.equal(uid_tagged_periods_spring26.length, 40);
 
 

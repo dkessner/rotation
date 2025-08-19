@@ -67,6 +67,12 @@ function replaceValues(vevent, replacements)
             propertyList[i] = [name, unknown, type, replacements[name]];
         }
 
+        if (name === "uid" && "uid_suffix" in replacements)
+        {
+            let new_value = value + replacements["uid_suffix"];
+            propertyList[i] = [name, unknown, type, new_value];
+        }
+
         // remove index from leftovers list
         const index = leftovers.indexOf(name);
         if (index > -1) {
@@ -75,7 +81,11 @@ function replaceValues(vevent, replacements)
     }
 
     for (const name of leftovers) {
-        propertyList.push([name, {}, 'text', replacements[name]]);
+        // add location and description if they weren't in the vevent
+        if (name !== "uid_suffix")
+        {
+            propertyList.push([name, {}, 'text', replacements[name]]);
+        }
     }
 
     return [vevent[0], propertyList, vevent[2]];
