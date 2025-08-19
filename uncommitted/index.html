@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rotation Calendar Tool | Generate your own rotation calendar with custom event descriptions.</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Rotation Calendar Tool" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generate your own rotation calendar with custom event descriptions." />
+<meta property="og:description" content="Generate your own rotation calendar with custom event descriptions." />
+<link rel="canonical" href="/rotation/" />
+<meta property="og:url" content="/rotation/" />
+<meta property="og:site_name" content="Rotation Calendar Tool" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rotation Calendar Tool" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Generate your own rotation calendar with custom event descriptions.","headline":"Rotation Calendar Tool","name":"Rotation Calendar Tool","url":"/rotation/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rotation/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/rotation/feed.xml" title="Rotation Calendar Tool" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><!--<a class="site-title" rel="author" href="/rotation/">-->
+    <a class="site-title" rel="author" href="/rotation/">
+        <img src="/rotation/assets/M.png" width="30em" style:"margin: 10px"; /><span>&nbsp;</span>Rotation Calendar Tool
+    </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rotation/about/">About</a><a class="page-link" href="/rotation/example/">Example</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>Enter your class info.  Anything you leave blank will be ignored.</p>
+
+<style>
+td {
+    text-align: center;
+}
+</style>
+
+<table>
+<tr><td></td><td>Class</td><td>Location</td><td>Description</td><td>ID</td></tr>
+<tr><td>B</td><td><input type="text" id="B" size="20%" /></td><td><input type="text" id="B_location" size="10%" /></td><td><input type="text" id="B_description" size="30%" /></td><td><input type="text" id="B_id" size="10%" /></td></tr>
+<tr><td>C</td><td><input type="text" id="C" size="20%" /></td><td><input type="text" id="C_location" size="10%" /></td><td><input type="text" id="C_description" size="30%" /></td><td><input type="text" id="C_id" size="10%" /></td></tr>
+<tr><td>D</td><td><input type="text" id="D" size="20%" /></td><td><input type="text" id="D_location" size="10%" /></td><td><input type="text" id="D_description" size="30%" /></td><td><input type="text" id="D_id" size="10%" /></td></tr>
+<tr><td>E</td><td><input type="text" id="E" size="20%" /></td><td><input type="text" id="E_location" size="10%" /></td><td><input type="text" id="E_description" size="30%" /></td><td><input type="text" id="E_id" size="10%" /></td></tr>
+<tr><td>F</td><td><input type="text" id="F" size="20%" /></td><td><input type="text" id="F_location" size="10%" /></td><td><input type="text" id="F_description" size="30%" /></td><td><input type="text" id="F_id" size="10%" /></td></tr>
+<tr><td>G</td><td><input type="text" id="G" size="20%" /></td><td><input type="text" id="G_location" size="10%" /></td><td><input type="text" id="G_description" size="30%" /></td><td><input type="text" id="G_id" size="10%" /></td></tr>
+<tr><td>H</td><td><input type="text" id="H" size="20%" /></td><td><input type="text" id="H_location" size="10%" /></td><td><input type="text" id="H_description" size="30%" /></td><td><input type="text" id="H_id" size="10%" /></td></tr>
+<tr><td>I</td><td><input type="text" id="I" size="20%" /></td><td><input type="text" id="I_location" size="10%" /></td><td><input type="text" id="I_description" size="30%" /></td><td><input type="text" id="I_id" size="10%" /></td></tr>
+</table>
+
+<table>
+<tr><td>Start Date</td><td><input type="date" name="start" id="startTime" value="2024-08-26" /></td></tr>
+<tr><td>End Date</td><td><input type="date" name="end" id="endTime" value="2025-06-15" /></td></tr>
+</table>
+
+<p><input type="button" value="Generate calendar!" onclick="generateCalendar()" /></p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Fill out the form above (ignore ID field)</li>
+  <li>Click the “Generate calendar!” button to download / save <code class="language-plaintext highlighter-rouge">my_rotation.ics</code></li>
+  <li>Import <code class="language-plaintext highlighter-rouge">my_rotation.ics</code> into your Google Calendar</li>
+</ol>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h2 id="detailed-instructions-for-step-3">Detailed Instructions for Step #3</h2>
+
+<h3 id="create-a-new-calendar-optional">Create a new calendar (<em>optional</em>)</h3>
+
+<ul>
+  <li><em>Why?</em> Creating a new calendar lets you easily turn the calendar view
+on/off, and you can share it too.  You could create a calendar for each
+class/course.</li>
+  <li>Click the Settings icon, choose “Settings”</li>
+  <li>(<em>left sidebar</em>) Click “Add calendar”, “Create new calendar”</li>
+  <li>Give your new calendar a name and click the “Create calendar” button</li>
+</ul>
+
+<h3 id="import-my_rotationics">Import <code class="language-plaintext highlighter-rouge">my_rotation.ics</code></h3>
+
+<ul>
+  <li>Go to (or stay in) the Settings page in Google Calendar</li>
+  <li>(<em>left sidebar</em>) Click “Import &amp; export”, “Import”</li>
+  <li>Choose the calendar you want to add the events to, and select the
+  <code class="language-plaintext highlighter-rouge">my_rotation.ics</code> file that you saved</li>
+  <li>Click “Import”.</li>
+</ul>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h2 id="advanced-usage-multiple-classes-during-the-same-period">Advanced usage: multiple classes during the same period</h2>
+
+<p>The second time you import, your new events will overwrite any
+previously imported events occurring at the same time.  You can avoid
+this by using the <code class="language-plaintext highlighter-rouge">ID</code> field.</p>
+
+<p>You can put any text/numbers you want in the <code class="language-plaintext highlighter-rouge">ID</code> field.  Events with
+different IDs will not overwrite each other.</p>
+
+<p>For example, if you want to include 3 different classes occuring during
+the same period on the same calendar, you could use three different ids:
+<code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> to generate three <code class="language-plaintext highlighter-rouge">.ics</code> files to import into your
+calendar.</p>
+
+<script src="js/ics_transform_bundle.js"></script>
+
+<script>
+
+
+function download(filename, text) 
+{
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
+
+function generateCalendar() 
+{
+    let periods = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+    let schedule = {};
+
+    for (let period of periods)
+    {
+        let inputClass = document.getElementById(period);
+        if (inputClass.value)
+        {
+            schedule[period] = {};
+            schedule[period]["summary"] = inputClass.value;
+
+            let inputLocation = document.getElementById(period + "_location");
+            if (inputLocation)
+                schedule[period]["location"] = inputLocation.value;
+
+            let inputDescription = document.getElementById(period + "_description");
+            if (inputDescription)
+                schedule[period]["description"] = inputDescription.value;
+
+            let inputID = document.getElementById(period + "_id");
+            if (inputID)
+                schedule[period]["uid_suffix"] = inputID.value;
+        }
+    }
+
+    let startTime = document.getElementById("startTime").value;
+    let endTime = document.getElementById("endTime").value;
+
+    let ics = ics_transform.doTransformation(schedule, startTime, endTime);
+
+    download("my_rotation.ics", ics);
+}
+
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rotation/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Rotation Calendar Tool</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Rotation Calendar Tool</li><li><a class="u-email" href="mailto:Darren.Kessner@marlborough.org">Darren.Kessner@marlborough.org</a></li></ul>
+      </div>
+
+
+      <div class="footer-col footer-col-2">
+      <!--<ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/rotation/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/rotation/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+-->
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Generate your own rotation calendar with custom event descriptions.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
