@@ -1,0 +1,27 @@
+<html>
+
+    <body>
+        <script src="ics_transform_bundle.js"></script>
+        <script>
+
+const scheduleCD = 
+{
+    C: {summary: "C CS Projects", description: "zoom link"},
+    D: {summary: "D APCS", "location": "D215"}
+};
+
+
+const fall2021Start = "2021-08";
+const fall2021End = "2021-12-31";
+
+
+let icsCD = ics_transform.doTransformation(scheduleCD, fall2021Start, fall2021End);
+
+console.log(icsCD);
+
+
+        </script>
+    </body>
+
+</html>
+
